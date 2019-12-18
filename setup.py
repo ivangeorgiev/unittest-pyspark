@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="unittest-pyspark", # Replace with your own username
-    version="0.0.2",
+    version="0.0.5",
     author="Ivan Georgiev",
     author_email="ivan.georgiev@gmail.com",
     description="Extension to unittest for pySpark",
@@ -14,8 +14,6 @@ setuptools.setup(
     url="https://github.com/ivangeorgiev/unittest-pyspark",
     packages=setuptools.find_packages(),
     install_requires=[
-          'unittest',
-          'inspect',
       ],
     classifiers=[
         "Programming Language :: Python :: 3",

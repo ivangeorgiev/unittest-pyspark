@@ -1,7 +1,7 @@
 
 import inspect, unittest
 
-def discover_test_cases():
+def discover_test_cases(scope=None):
   """Discover unittest Test Cases defined in the global scope.
   
   Returns a list of unittest.TestCase objects."""
@@ -14,7 +14,7 @@ def discover_test_cases():
       return False
     return True
   
-  g = globals()
+  g = scope or globals()
   result = set()
   for name in g.keys():
     obj = g[name]

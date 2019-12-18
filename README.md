@@ -45,7 +45,7 @@ import pyspark.sql.types as pst
 
 class Test_Spark(unittest.TestCase):
   def setUp(self):
-      self.spark = get_spark()
+      self.spark = dict(globals()).get("spark", None) or get_spark()
 
   def test_i_can_fly(self):
     input = [ pst.Row(a=1, b=2)]
@@ -73,7 +73,7 @@ To execute the `unittest` test cases in Databricks, add following cell:
 ```python
 from unittest_pyspark.unittest import *
 if __name__ == "__main__":
-  execute_test_cases(discover_test_cases())
+  execute_test_cases(discover_test_cases(globals()))
 ```
 
 Above code will automatically discover all test cases (unittest.TestCase
