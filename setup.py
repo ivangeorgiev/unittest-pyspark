@@ -7,7 +7,6 @@ setuptools.setup(
     name="unittest-pyspark", # Replace with your own username
     version="0.0.5",
     author="Ivan Georgiev",
-    author_email="ivan.georgiev@gmail.com",
     description="Extension to unittest for pySpark",
     long_description=long_description,
     long_description_content_type="text/markdown",
